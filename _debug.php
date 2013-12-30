@@ -11,7 +11,10 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2010-08-27
+# 2013-12-30
+
+// ajouter la ligne suivante (sans les //) dans le fichier _define.php afin d'activer la console de debug :
+// require_once dirname(__FILE__).'/_debug.php';
 
 /**
  * debug tweak
