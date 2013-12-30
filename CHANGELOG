@@ -1,0 +1,23 @@
+0.2.3 (29-12-2013)
+* mise en compatibilité avec dc2.6
+* mise en compatibilité avec php5.3
+* correction traduction
+* ajout code sécurité dans les fichiers php
+* ajout page d'aide en anglais (traduction à l'arrache)
+
+0.2.2 (2012-02-22)
+* Add option to count 'Top reads' posts not before 'x' days (get top reads since 'x' days)
+* Add informations and statistics on admin page
+
+0.2.1 (2010-09-09)
+* Bugfix for counting post reads (bad reporting in widget Statistics)
+
+0.2 (2010-08-27)
+* Dotclear 2.2 compatibility update (2.2 at least required)
+
+0.1 (2010-04-04)
+* first release
+* 4 different widgets: statistics, top reads, top comments, top trackbacks
+* statistics: get counters for posts, comments and trackbacks (get total for each one)
+* statistics: if postcount module is installed, get post read counters (min, max, sum, avg)
+* top reads, top comments, top trackbacks: get top 'x' posts reads/comments/trackbacks

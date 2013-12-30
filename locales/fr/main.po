@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: brol <contact@brol.info>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+
+# commons
+# ----------
+
+#:
+msgid "Home"
+msgstr "Accueil"
+
+#:
+msgid "Reset to default settings"
+msgstr "Réinitialiser aux paramètres par défaut"
+
+#:
+msgid "Synchronize blog"
+msgstr "Synchroniser le blog"
+
+#:
+msgid "Settings"
+msgstr "Paramètres"
+
+#:
+msgid "Settings saved."
+msgstr "Paramètres enregistrés."
+
+#:
+msgid "Settings reseted."
+msgstr "Paramètres réinitialisés."
+
+
+# specifics
+# ----------
+
+#:
+msgid "dcStats"
+msgstr "dcStats"
+
+#:
+msgid "Dotclear 2 Statistics"
+msgstr "Statistiques pour Dotclear 2"
+
+#:
+msgid "Categories"
+msgstr "Catégories"
+
+#:
+msgid "Author"
+msgstr "Auteur"
+
+#:
+msgid "Authors"
+msgstr "Auteurs"
+
+#:
+msgid "Total post reading"
+msgstr "Lecture de billet(s)"
+
+#:
+msgid "Total posts reading"
+msgstr "Lectures de billet"
+
+#:
+msgid "Read for most read post"
+msgstr "Lecture pour le billet le plus lus"
+
+#:
+msgid "Reads for most read post"
+msgstr "Lectures pour le billet le plus lus"
+
+#:
+msgid "Average posts read"
+msgstr "Lectures en moyennes par billet"
+
+#:
+msgid "Average post read"
+msgstr "Lectures en moyenne par billet"
+
+#:
+msgid "Go to the post"
+msgstr "Allez au billet"
+
+#:
+msgid "Unable to install or update the plugin dcStats"
+msgstr "Impossible d'installer ou de mettre à jour le module dcStats"
+
+#:
+msgid "Statistics"
+msgstr "Statistiques"
+
+#:
+msgid "Top reads"
+msgstr "Top lectures"
+
+#:
+msgid "Top comments"
+msgstr "Top commentaires"
+
+#:
+msgid "Top trackbacks"
+msgstr "Top rétroliens"
+
+#:
+msgid "No content"
+msgstr "Rien à afficher"
+
+#:
+msgid "Display postCount stats"
+msgstr "Affiche les statistiques de postCount"
+
+#:
+msgid "Show counts"
+msgstr "Affiche les compteurs"
+
+#:
+msgid "Posts limit (empty means 5 posts):"
+msgstr "Limite du nombre de billets (vide signifie 5 billets) :"
+
+#:
+msgid "Maximal post title length:"
+msgstr "Longueur maximal du titre du billet :"
+
+#:
+msgid "Display posts count"
+msgstr "Afficher le compteur de billets"
+
+#:
+msgid "Display comments count"
+msgstr "Afficher le compteur de commentaires"
+
+#:
+msgid "Display trackbacks count"
+msgstr "Afficher le compteur de rétroliens"
+
+#:
+msgid "Display categories count"
+msgstr "Afficher le compteur de catégories"
+
+#:
+msgid "Display tags count"
+msgstr "Afficher le compteur de mots clés"
+
+#:
+msgid "Display authors count"
+msgstr "Afficher le nombre d'auteurs"
+
+#:
+msgid "Do not count below X days:"
+msgstr "Ne pas comptabiliser avant X jours :"
+
+#:
+msgid "selected entries"
+msgstr "billets sélectionnés"
+
+#:
+msgid "selected entry"
+msgstr "billet sélectionné"
+
+#:
+msgid "entries waiting"
+msgstr "billets en attente"
+
+#:
+msgid "entry waiting"
+msgstr "billet en attente"
+
+#:
+msgid "scheduled entries"
+msgstr "billets programmés"
+
+#:
+msgid "scheduled entry"
+msgstr "billet programmé"
+
+#:
+msgid "offline entries"
+msgstr "billets hors ligne"
+
+#:
+msgid "offline entry"
+msgstr "billet hors ligne"
+
+#:
+msgid "Start"
+msgstr "Ouverture"
+
+#:
+msgid "Last updates"
+msgstr "Dernières mise à jour"
+
+#:
+msgid "Media"
+msgstr "Média"
+
+#:
+msgid "Go to content"
+msgstr "Aller au contenu"
