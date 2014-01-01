@@ -11,11 +11,14 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2013-12-30
+# 2014-01-01
 
 if (!defined('DC_RC_PATH')) {
   return null;
 }
+
+// décommentez la ligne ci-après afin d'activer la console de debug :
+// require_once dirname(__FILE__).'/_debug.php';
 
 /**
  * register this module for Dotclear
@@ -24,7 +27,7 @@ $this->registerModule(
 	/* Name */			"dcStats",
 	/* Description*/	"Dotclear 2 Statistics",
 	/* Author */		"Olivier Le Bris, Pierre Van Glabeke",
-	/* Version */		"0.2.3",
+	/* Version */		"0.2.4",
 	/* Properties */
 	array(
 		'permissions' => 'usage,contentadmin,admin',

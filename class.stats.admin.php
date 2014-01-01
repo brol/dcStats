@@ -11,8 +11,8 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2013-12-29
-
+# 2014-01-01
+if (!defined('DC_RC_PATH')) {return;}
 /**
  * manage statistics for admin part
  */
@@ -141,7 +141,7 @@ class dcStatsAdmin {
 	 */
 	public function StartBlogDate($title='') {
 		$res = '';
-		if ($title == '') $title = __('Start').': ';
+		if ($title == '') $title = __('Start:').' ';
 		$start = $this->core->blog->getPosts(array('order' => 'post_dt ASC','limit' => '1'));
 		$str_start = dt::dt2str($this->core->blog->settings->date_format,$start->post_dt);
 		$str_date = $title.$str_start;//$str_date = sprintf('%s%s',$title,$str_start);
@@ -156,7 +156,7 @@ class dcStatsAdmin {
 	 */
 	public function LastBlogUpdate($title='') {
 		$res = '';
-		if ($title == '') $title = __('Blog').': ';
+		if ($title == '') $title = __('Blog:').' ';
 		$str_update = dt::str($this->dtmask,$this->core->blog->upddt,$this->core->blog->settings->system->blog_timezone);
 		$str_date = sprintf('%s%s',$title,$str_update);
 		$res .= sprintf($this->mask,'lastblogupdate-date',$str_date);
@@ -168,7 +168,7 @@ class dcStatsAdmin {
 	 */
 	public function LastPostUpdate($title='') {
 		$res = '';
-		if ($title == '') $title = __('Post').': ';
+		if ($title == '') $title = __('Post:');
 		$rs = $this->core->blog->getPosts(array('limit'=>1,'no_content'=>true,'order'=>'post_upddt DESC'));
 		$title = html::escapeHTML($title).' ';
 		if (!$rs->isEmpty())
@@ -190,9 +190,9 @@ class dcStatsAdmin {
 	 */
 	public function LastCommentUpdate($title='') {
 		$res = '';
-		if ($title == '') $title = __('Comment').': ';
+		if ($title == '') $title = __('Comment:');
 		$rs = $this->core->blog->getComments(array('limit'=>1,'no_content'=>true,'order'=>'comment_upddt DESC'));
-		$title = html::escapeHTML($title);
+		$title = html::escapeHTML($title).' ';
 		if (!$rs->isEmpty())
 		{
 			$link = $this->core->blog->url.$this->core->getPostPublicURL($rs->post_type,html::sanitizeURL($rs->post_url)).'#c'.$rs->comment_id;
@@ -212,7 +212,7 @@ class dcStatsAdmin {
 	 */
 	public function LastMediaUpdate($title='') {
 		$res = '';
-		if ($title == '') $title = __('Media').': ';
+		if ($title == '') $title = __('Media:');
 		$rs = $this->core->con->select(
 			'SELECT media_id FROM '.$this->core->prefix.'media '.
 			"WHERE media_path='".$this->core->con->escape($this->core->blog->settings->system->public_path)."' ".
@@ -230,7 +230,7 @@ class dcStatsAdmin {
 			$res .= sprintf('<li>%s<a href="%s" title="%s">%s</a> (%s)</li>',$title,$link,$over,$text,$timez);
 			
 			if ($fi->type_prefix == 'image') {
-				$res .= '<br /><img src="'.$fi->media_icon.'" title="'.$text.'" alt="'.$text.'" />';
+				$res .= '<li style="list-style:none;margin-top:10px;"><img src="'.$fi->media_icon.'" title="'.$text.'" alt="'.$text.'" /></li>';
 			}
 		}
 		else {

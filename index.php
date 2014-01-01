@@ -116,7 +116,7 @@ if (!empty($msg)) {
 <div class='multi-part' id='tab_settings' title='<?php echo __('Settings') ?>'>
 	<div class="fieldset">
 		<h4><?php echo __('Settings'); ?></h4>
-			<form action="plugin.php" method="post" id="state">	
+			<form action="plugin.php" method="post" id="state">
 				<p class="field">
 					<label for="plugin_defaults" class="classic"><?php echo __('Reset to default settings') ?></label>
 						<?php echo form::checkbox('plugin_defaults', 1, (boolean) false) ?>
@@ -150,7 +150,7 @@ if (!empty($msg)) {
 			</ul>
 	</div>
 	<div class="fieldset">
-		<h4><?php echo __('Last updates'); ?></h4>
+		<h4><?php echo __('Latest updates'); ?></h4>
 			<ul>
 				<?php echo $core->blog->dcStatsAdmin->LastBlogUpdate(); ?>
 				<?php echo $core->blog->dcStatsAdmin->LastPostUpdate(); ?>

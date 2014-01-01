@@ -18,6 +18,21 @@ msgstr ""
 msgid "Home"
 msgstr "Accueil"
 
+msgid "Start:"
+msgstr "Ouverture :"
+
+msgid "Blog:"
+msgstr "Blog :"
+
+msgid "Post:"
+msgstr "Billet :"
+
+msgid "Comment:"
+msgstr "Commentaire :"
+
+msgid "Media:"
+msgstr "Média :"
+
 #:
 msgid "Reset to default settings"
 msgstr "Réinitialiser aux paramètres par défaut"
@@ -80,7 +95,7 @@ msgstr "Lectures pour le billet le plus lus"
 
 #:
 msgid "Average posts read"
-msgstr "Lectures en moyennes par billet"
+msgstr "Lectures en moyenne par billet"
 
 #:
 msgid "Average post read"
@@ -191,16 +206,8 @@ msgid "offline entry"
 msgstr "billet hors ligne"
 
 #:
-msgid "Start"
-msgstr "Ouverture"
-
-#:
-msgid "Last updates"
-msgstr "Dernières mise à jour"
-
-#:
-msgid "Media"
-msgstr "Média"
+msgid "Latest updates"
+msgstr "Dernières mises à jour"
 
 #:
 msgid "Go to content"
