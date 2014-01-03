@@ -11,7 +11,8 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2014-01-01
+# 03-01-2014
+
 if (!defined('DC_RC_PATH')) {return;}
 /**
  * manage statistics
@@ -183,8 +184,13 @@ class dcStats {
 				}
 				else {
 					try {
+					if ($this->core->con->driver() == 'mysql' || $this->core->con->driver() == 'mysqli') {
+            $cast_type = 'UNSIGNED';
+          } else {
+            $cast_type='INTEGER';
+          }
 						$req =
-						'SELECT MIN(CAST(M.meta_id AS UNSIGNED)) as min,MAX(CAST(M.meta_id AS UNSIGNED)) as max,SUM(CAST(M.meta_id AS UNSIGNED)) as sum,AVG(CAST(M.meta_id AS DECIMAL)) as avg '.
+						'SELECT MIN(CAST(M.meta_id AS '.$cast_type.')) as min,MAX(CAST(M.meta_id AS '.$cast_type.')) as max,SUM(CAST(M.meta_id AS '.$cast_type.')) as sum,AVG(CAST(M.meta_id AS DECIMAL)) as avg '.
 						'FROM '.$this->core->prefix.'meta M '.
 						'LEFT JOIN '.$this->core->prefix.'post P ON M.post_id=P.post_id WHERE '.
 						'P.post_status='.$status." AND P.post_password IS NULL AND M.meta_type = 'count|".$this->core->blog->settings->lang."' ".
@@ -275,8 +281,13 @@ class dcStats {
 					return $this->t_top;
 				else {
 					try {
+					if ($this->core->con->driver() == 'mysql' || $this->core->con->driver() == 'mysqli') {
+            $cast_type = 'UNSIGNED';
+          } else {
+            $cast_type='INTEGER';
+          }
 						$req =
-						'SELECT P.post_id,CAST(M.meta_id AS UNSIGNED) as count,P.post_title,P.post_url '.
+						'SELECT P.post_id,CAST(M.meta_id AS '.$cast_type.') as count,P.post_title,P.post_url '.
 						'FROM '.$this->core->prefix.'post P '.
 						'LEFT JOIN '.$this->core->prefix.'meta M ON P.post_id=M.post_id '.
 						'WHERE ';
@@ -288,7 +299,7 @@ class dcStats {
 							$req .= 'AND P.post_dt > (SELECT DATE_SUB(CURDATE(), INTERVAL '.(integer)$days.' DAY)) ';
 						}						
 						
-						$req .= 'ORDER BY CAST(M.meta_id AS UNSIGNED) DESC ';
+						$req .= 'ORDER BY CAST(M.meta_id AS '.$cast_type.') DESC ';
 						$req .= $this->core->con->limit($limit);
 
 						$rs = $this->core->con->select($req);

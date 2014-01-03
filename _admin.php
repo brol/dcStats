@@ -21,7 +21,7 @@ if (!defined('DC_CONTEXT_ADMIN')) { return; }
 /**
 * admin menu integration
 */
-$_menu['Plugins']->addItem('dcStats',
+$_menu['Blog']->addItem(__('Statistics'),
 	'plugin.php?p=dcStats',
 	'index.php?pf=dcStats/icon.png',
 	preg_match('/plugin.php\?p='.'dcStats'.'(&.*)?$/', $_SERVER['REQUEST_URI']),

@@ -59,11 +59,15 @@ msgstr "Paramètres réinitialisés."
 
 #:
 msgid "dcStats"
-msgstr "dcStats"
+msgstr "Statistiques pour Dotclear"
 
 #:
-msgid "Dotclear 2 Statistics"
-msgstr "Statistiques pour Dotclear 2"
+msgid "Statistics"
+msgstr "Statistiques"
+
+#:
+msgid "Dotclear Statistics"
+msgstr "Statistiques pour Dotclear"
 
 #:
 msgid "Categories"

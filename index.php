@@ -19,7 +19,7 @@
 if (!defined('DC_CONTEXT_ADMIN')) exit;
 dcPage::check('usage');
 
-$page_title = __('dcStats');
+$page_title = __('Statistics');
 
 /**
  * auto-load working class as needed
@@ -30,7 +30,7 @@ $core->blog->dcStatsAdmin = new dcStatsAdmin($core);
 
 /* get plugin operation */
 $p_op = (!empty($_POST['op']))?(string)$_POST['op']:'none';
-$p_tab='tab_about';
+$p_tab='tab_settings';
 
 /* get message to display */
 if (!empty($_GET['msg'])) $msg = (string) rawurldecode($_GET['msg']);
@@ -115,19 +115,18 @@ if (!empty($msg)) {
 
 <div class='multi-part' id='tab_settings' title='<?php echo __('Settings') ?>'>
 	<div class="fieldset">
-		<h4><?php echo __('Settings'); ?></h4>
 			<form action="plugin.php" method="post" id="state">
-				<p class="field">
+				<p>
+					<?php echo form::checkbox('plugin_defaults', 1, (boolean) false) ?>
 					<label for="plugin_defaults" class="classic"><?php echo __('Reset to default settings') ?></label>
-						<?php echo form::checkbox('plugin_defaults', 1, (boolean) false) ?>
 				</p>
-				<p class="field">
+				<p>
+					<?php echo form::checkbox('plugin_enabled', 1, (boolean) $core->blog->settings->dcStats->enabled) ?>
 					<label for="plugin_enabled" class="classic"><?php echo __('Plugin activation') ?></label>
-						<?php echo form::checkbox('plugin_enabled', 1, (boolean) $core->blog->settings->dcStats->enabled) ?>
 				</p>
-				<p class="field">
+				<p>
+					<?php echo form::checkbox('plugin_synchronize', 1, (boolean) $core->blog->settings->dcStats->synchronize) ?>
 					<label for="plugin_synchronize" class="classic"><?php echo __('Synchronize blog') ?></label>
-						<?php echo form::checkbox('plugin_synchronize', 1, (boolean) $core->blog->settings->dcStats->synchronize) ?>
 				</p>
 				<p>
 					<input type="submit" value="<?php echo __('Save') ?>" />
