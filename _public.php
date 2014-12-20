@@ -11,7 +11,7 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2013-12-29
+# 20-12-2014
 
 if (!defined('DC_RC_PATH')) {
         return;
@@ -92,6 +92,9 @@ class widgets_dcStats {
 	static public function Widget_dcStats($w) {
 		global $core;
 
+		if ($w->offline)
+			return;
+
 		if (($w->homeonly == 1 && $core->url->type != 'default') ||
 			($w->homeonly == 2 && $core->url->type == 'default'))
 			return;
@@ -111,8 +114,8 @@ class widgets_dcStats {
 		$s[] = ($w->authors) ? true : false;
 
 		return
-		$res = ($w->content_only ? '' : '<div class="dcStats'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
-		($w->title ? '<h2>'.html::escapeHTML($w->title).'</h2>' : '').
+		$res = ($w->content_only ? '' : '<div class="widget dcStats'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
+		($w->title ? $w->renderTitle(html::escapeHTML($w->title)) : '').
 			$core->blog->dcStats->formated_pctr($postcount,1,$s).
 		($w->content_only ? '' : '</div>');
 	}
@@ -122,6 +125,9 @@ class widgets_dcStats {
 	 */
 	static public function Widget_TopReads($w) {
 		global $core;
+
+		if ($w->offline)
+			return;
 
 		if (($w->homeonly == 1 && $core->url->type != 'default') ||
 			($w->homeonly == 2 && $core->url->type == 'default'))
@@ -137,8 +143,8 @@ class widgets_dcStats {
 		$nb_days = $w->nb_days ? abs((integer)$w->nb_days) : 0;
 
 		return
-		$res = ($w->content_only ? '' : '<div class="dcStatsTopRead'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
-		($w->title ? '<h2>'.html::escapeHTML($w->title).'</h2>' : '').
+		$res = ($w->content_only ? '' : '<div class="widget dcStatsTopRead'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
+		($w->title ? $w->renderTitle(html::escapeHTML($w->title)) : '').
 			$core->blog->dcStats->formated_top($limit,$count,$nb_letter,1,$nb_days).
 		($w->content_only ? '' : '</div>');
 	}
@@ -148,6 +154,9 @@ class widgets_dcStats {
 	 */
 	static public function Widget_TopCommented($w) {
 		global $core;
+
+		if ($w->offline)
+			return;
 
 		if (($w->homeonly == 1 && $core->url->type != 'default') ||
 			($w->homeonly == 2 && $core->url->type == 'default'))
@@ -162,8 +171,8 @@ class widgets_dcStats {
 		$nb_letter = abs((integer)$w->nb_letter);
 
 		return
-		$res = ($w->content_only ? '' : '<div class="dcStatsTopCommendted'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
-		($w->title ? '<h2>'.html::escapeHTML($w->title).'</h2>' : '').
+		$res = ($w->content_only ? '' : '<div class="widget dcStatsTopCommendted'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
+		($w->title ? $w->renderTitle(html::escapeHTML($w->title)) : '').
 			$core->blog->dcStats->formated_commented($limit,$count,$nb_letter).
 		($w->content_only ? '' : '</div>');
 	}
@@ -173,6 +182,9 @@ class widgets_dcStats {
 	 */
 	static public function Widget_TopTrackbacked($w) {
 		global $core;
+
+		if ($w->offline)
+			return;
 
 		if (($w->homeonly == 1 && $core->url->type != 'default') ||
 			($w->homeonly == 2 && $core->url->type == 'default'))
@@ -187,8 +199,8 @@ class widgets_dcStats {
 		$nb_letter = abs((integer)$w->nb_letter);
 
 		return
-		$res = ($w->content_only ? '' : '<div class="dcStatsTopTrackbacked'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
-		($w->title ? '<h2>'.html::escapeHTML($w->title).'</h2>' : '').
+		$res = ($w->content_only ? '' : '<div class="widget dcStatsTopTrackbacked'.($w->class ? ' '.html::escapeHTML($w->class) : '').'">').
+		($w->title ? $w->renderTitle(html::escapeHTML($w->title)) : '').
 			$core->blog->dcStats->formated_trackbacked($limit,$count,$nb_letter).
 		($w->content_only ? '' : '</div>');
 	}

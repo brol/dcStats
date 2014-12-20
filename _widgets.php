@@ -11,7 +11,7 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2013-12-29
+# 20-12-2014
 
 if (!defined('DC_RC_PATH')) { return; }
 
@@ -43,6 +43,7 @@ class bhv_dcStats {
 		);
 		$widgets->dcStats->setting('content_only',__('Content only'),0,'check');
 		$widgets->dcStats->setting('class',__('CSS class:'),'');
+		$widgets->dcStats->setting('offline',__('Offline'),0,'check');
 
 		$widgets->create('dcStatsTopReads',__('Top reads'),array('widgets_dcStats','Widget_TopReads'));
 		$widgets->dcStatsTopReads->setting('title',__('Title:'),__('Top reads'));
@@ -59,6 +60,7 @@ class bhv_dcStats {
 		);
 		$widgets->dcStatsTopReads->setting('content_only',__('Content only'),0,'check');
 		$widgets->dcStatsTopReads->setting('class',__('CSS class:'),'');
+		$widgets->dcStatsTopReads->setting('offline',__('Offline'),0,'check');
 
 		$widgets->create('dcStatsTopCommented',__('Top comments'),array('widgets_dcStats','Widget_TopCommented'));
 		$widgets->dcStatsTopCommented->setting('title',__('Title:'),__('Top comments'));
@@ -74,6 +76,7 @@ class bhv_dcStats {
 		);
 		$widgets->dcStatsTopCommented->setting('content_only',__('Content only'),0,'check');
 		$widgets->dcStatsTopCommented->setting('class',__('CSS class:'),'');
+		$widgets->dcStatsTopCommented->setting('offline',__('Offline'),0,'check');
 
 		$widgets->create('dcStatsTopTrackbacked',__('Top trackbacks'),array('widgets_dcStats','Widget_TopTrackbacked'));
 		$widgets->dcStatsTopTrackbacked->setting('title',__('Title:'),__('Top trackbacks'));
@@ -89,5 +92,6 @@ class bhv_dcStats {
 		);
 		$widgets->dcStatsTopTrackbacked->setting('content_only',__('Content only'),0,'check');
 		$widgets->dcStatsTopTrackbacked->setting('class',__('CSS class:'),'');
+		$widgets->dcStatsTopTrackbacked->setting('offline',__('Offline'),0,'check');
 	}
 }

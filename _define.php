@@ -11,7 +11,7 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 03-01-2014
+# 20-12-2014
 
 if (!defined('DC_RC_PATH')) {
   return null;
@@ -27,12 +27,12 @@ $this->registerModule(
 	/* Name */			"dcStats",
 	/* Description*/	"Dotclear Statistics / Statistiques pour Dotclear",
 	/* Author */		"Olivier Le Bris, Pierre Van Glabeke",
-	/* Version */		"0.2.6",
+	/* Version */		"0.2.7",
 	/* Properties */
 	array(
 		'permissions' => 'usage,contentadmin,admin',
 		'type' => 'plugin',
-		'dc_min' => '2.6',
+		'dc_min' => '2.7',
 		'support' => 'http://forum.dotclear.org/viewtopic.php?pid=326229#p326229',
 		'details' => 'http://plugins.dotaddict.org/dc2/details/dcStats'
 		)
