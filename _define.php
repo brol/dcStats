@@ -11,7 +11,7 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 20-12-2014
+# 23-01-2015
 
 if (!defined('DC_RC_PATH')) {
   return null;
@@ -25,9 +25,9 @@ if (!defined('DC_RC_PATH')) {
  */
 $this->registerModule(
 	/* Name */			"dcStats",
-	/* Description*/	"Dotclear Statistics / Statistiques pour Dotclear",
+	/* Description*/	"Dotclear Statistics",
 	/* Author */		"Olivier Le Bris, Pierre Van Glabeke",
-	/* Version */		"0.2.7",
+	/* Version */		"0.2.8",
 	/* Properties */
 	array(
 		'permissions' => 'usage,contentadmin,admin',

@@ -66,6 +66,38 @@ msgid "Statistics"
 msgstr "Statistiques"
 
 #:
+msgid "DcStats: statistics"
+msgstr "DcStats : statistiques"
+
+#:
+msgid "Complete statistics"
+msgstr "Statistiques complètes"
+
+#:
+msgid "DcStats: top reads"
+msgstr "DcStats : top lectures"
+
+#:
+msgid "List of best reads"
+msgstr "Liste des meilleures lectures"
+
+#:
+msgid "DcStats: top comments"
+msgstr "DcStats : top commentaires"
+
+#:
+msgid "Post list with the most comments"
+msgstr "Liste des billets ayant le plus de commentaires"
+
+#:
+msgid "DcStats: top trackbacks"
+msgstr "DcStats : top rétroliens"
+
+#:
+msgid "List of tickets with the most trackbacks"
+msgstr "Liste des billets ayant le plus de rétroliens"
+
+#:
 msgid "Dotclear Statistics"
 msgstr "Statistiques pour Dotclear"
 
@@ -114,8 +146,8 @@ msgid "Unable to install or update the plugin dcStats"
 msgstr "Impossible d'installer ou de mettre à jour le module dcStats"
 
 #:
-msgid "Statistics"
-msgstr "Statistiques"
+msgid "Trackbacks"
+msgstr "Rétroliens"
 
 #:
 msgid "Top reads"

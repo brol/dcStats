@@ -11,7 +11,7 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 20-12-2014
+# 23-01-2015
 
 if (!defined('DC_RC_PATH')) { return; }
 
@@ -25,7 +25,9 @@ $core->addBehavior('initWidgets',array('bhv_dcStats','initWidgets'));
  */
 class bhv_dcStats {
 	public static function initWidgets($widgets) {
-		$widgets->create('dcStats',__('Statistics'),array('widgets_dcStats','Widget_dcStats'));
+		$widgets->create('dcStats',__('DcStats: statistics'),array('widgets_dcStats','Widget_dcStats'),
+			null,
+			__('Complete statistics'));
 		$widgets->dcStats->setting('title',__('Title:'),__('Statistics'));
 		$widgets->dcStats->setting('posts', __('Display posts count'), 1, 'check');
 		$widgets->dcStats->setting('comments', __('Display comments count'), 1, 'check');
@@ -45,7 +47,9 @@ class bhv_dcStats {
 		$widgets->dcStats->setting('class',__('CSS class:'),'');
 		$widgets->dcStats->setting('offline',__('Offline'),0,'check');
 
-		$widgets->create('dcStatsTopReads',__('Top reads'),array('widgets_dcStats','Widget_TopReads'));
+		$widgets->create('dcStatsTopReads',__('DcStats: top reads'),array('widgets_dcStats','Widget_TopReads'),
+			null,
+			__('List of best reads'));
 		$widgets->dcStatsTopReads->setting('title',__('Title:'),__('Top reads'));
 		$widgets->dcStatsTopReads->setting('count', __('Show counts'), 1, 'check');
 		$widgets->dcStatsTopReads->setting('limit',__('Posts limit (empty means 5 posts):'),'5');
@@ -62,7 +66,9 @@ class bhv_dcStats {
 		$widgets->dcStatsTopReads->setting('class',__('CSS class:'),'');
 		$widgets->dcStatsTopReads->setting('offline',__('Offline'),0,'check');
 
-		$widgets->create('dcStatsTopCommented',__('Top comments'),array('widgets_dcStats','Widget_TopCommented'));
+		$widgets->create('dcStatsTopCommented',__('DcStats: top comments'),array('widgets_dcStats','Widget_TopCommented'),
+			null,
+			__('Post list with the most comments'));
 		$widgets->dcStatsTopCommented->setting('title',__('Title:'),__('Top comments'));
 		$widgets->dcStatsTopCommented->setting('count', __('Show counts'), 1, 'check');
 		$widgets->dcStatsTopCommented->setting('limit',__('Posts limit (empty means 5 posts):'),'5');
@@ -78,7 +84,9 @@ class bhv_dcStats {
 		$widgets->dcStatsTopCommented->setting('class',__('CSS class:'),'');
 		$widgets->dcStatsTopCommented->setting('offline',__('Offline'),0,'check');
 
-		$widgets->create('dcStatsTopTrackbacked',__('Top trackbacks'),array('widgets_dcStats','Widget_TopTrackbacked'));
+		$widgets->create('dcStatsTopTrackbacked',__('DcStats: top trackbacks'),array('widgets_dcStats','Widget_TopTrackbacked'),
+			null,
+			__('List of tickets with the most trackbacks'));
 		$widgets->dcStatsTopTrackbacked->setting('title',__('Title:'),__('Top trackbacks'));
 		$widgets->dcStatsTopTrackbacked->setting('count', __('Show counts'), 1, 'check');
 		$widgets->dcStatsTopTrackbacked->setting('limit',__('Posts limit (empty means 5 posts):'),'5');
