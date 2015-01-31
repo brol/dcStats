@@ -11,7 +11,7 @@
 # http://creativecommons.org/licenses/by-nc-sa/3.0/deed.fr_CA
 # -- END LICENSE BLOCK ------------------------------------
 #
-# 2013-12-29
+# 31-01-2015
 
 /**
  * rights management
@@ -114,30 +114,30 @@ if (!empty($msg)) {
 ?>
 
 <div class='multi-part' id='tab_settings' title='<?php echo __('Settings') ?>'>
-	<div class="fieldset">
-			<form action="plugin.php" method="post" id="state">
-				<p>
-					<?php echo form::checkbox('plugin_defaults', 1, (boolean) false) ?>
-					<label for="plugin_defaults" class="classic"><?php echo __('Reset to default settings') ?></label>
-				</p>
-				<p>
-					<?php echo form::checkbox('plugin_enabled', 1, (boolean) $core->blog->settings->dcStats->enabled) ?>
-					<label for="plugin_enabled" class="classic"><?php echo __('Plugin activation') ?></label>
-				</p>
-				<p>
-					<?php echo form::checkbox('plugin_synchronize', 1, (boolean) $core->blog->settings->dcStats->synchronize) ?>
-					<label for="plugin_synchronize" class="classic"><?php echo __('Synchronize blog') ?></label>
-				</p>
-				<p>
-					<input type="submit" value="<?php echo __('Save') ?>" />
+  <form action="plugin.php" method="post" id="state">
+    <div class="fieldset">
+      <p>
+        <?php echo form::checkbox('plugin_defaults', 1, (boolean) false) ?>
+				<label for="plugin_defaults" class="classic"><?php echo __('Reset to default settings') ?></label>
+			</p>
+			<p>
+				<?php echo form::checkbox('plugin_enabled', 1, (boolean) $core->blog->settings->dcStats->enabled) ?>
+				<label for="plugin_enabled" class="classic"><?php echo __('Plugin activation') ?></label>
+			</p>
+			<p>
+				<?php echo form::checkbox('plugin_synchronize', 1, (boolean) $core->blog->settings->dcStats->synchronize) ?>
+				<label for="plugin_synchronize" class="classic"><?php echo __('Synchronize blog') ?></label>
+			</p>
+    </div>
+			<p>
+				<input type="submit" value="<?php echo __('Save') ?>" />
 				<?php
 					echo form::hidden(array('p'),'dcStats');
 					echo form::hidden(array('op'),'settings');
 					echo $core->formNonce();
 				?>
-				</p>
-			</form>
-	</div>
+			</p>
+	</form>
 </div>
 
 <?php if ($core->auth->check('usage', $core->blog->id) && $core->blog->settings->dcStats->enabled) { ?>
